@@ -129,3 +129,70 @@ footer {
     padding: 30px;
     color: #777;
 }
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Дозволяє кнопкам переноситися на новий рядок */
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-box {
+        padding: 20px;
+        width: 90%; /* Щоб рамка не впиралася в краї екрана */
+    }
+
+    .hero-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 200px; /* Зменшуємо висоту картинки на мобілці */
+    }
+
+
+    .grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 10px 0;
+    }
+
+    /* Контейнер: зменшуємо відступи по боках */
+    .container {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-box h1 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
