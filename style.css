@@ -1,198 +1,92 @@
 
-/* Основні налаштування */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #e0e0e0; 
+    font-family: 'Arial', sans-serif;
+    background-color: #e5e5e5; /* Сірий фон як на фото */
     color: #333;
+    line-height: 1.4;
 }
-
-/* Навігація */
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background: #000;
     color: white;
-    padding: 15px 50px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
-
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
-
 .nav-links a {
-    color: #ddd;
+    color: #bbb;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    font-size: 0.8rem;
 }
-
-.nav-links a:hover, .nav-links a.active {
+.nav-links a.active {
     color: #2ecc71;
+    font-weight: bold;
 }
-
-
 .hero {
-    height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url("https://yaskravaklumba.com.ua/uploads/stati/Vidy_pochvy_kak_uluchshyt_grunt.jpg?1573212811803"); 
+    height: 350px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://your-image-link.jpg'); /* ВСТАВ СЮДИ ПОСИЛАННЯ НА ФОТО З РУКАМИ */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
-
 .hero-box {
-    border: 3px solid white;
-    padding: 30px 60px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.hero-box h1 {
+    border: 2px solid white;
+    padding: 20px 40px;
+    text-align: center;
     color: white;
-    font-size: 2.5rem;
-    text-transform: uppercase;
 }
-
-.author {
-    color: white;
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-/* Контейнер */
+.hero-box h1 { font-size: 2rem; text-transform: uppercase; }
 .container {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1200px;
+    margin: 30px auto;
     padding: 0 20px;
 }
-
-/* Блок: Картинка + Текст */
 .info-block {
     display: flex;
     gap: 30px;
-    align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    background: transparent;
 }
-
-.image-placeholder {
-    flex: 1;
-    background: #ccc;
-    height: 300px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.image-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-content {
-    flex: 1;
-}
-
-/* Сітка стовпців */
+.image-placeholder { flex: 1; }
+.image-placeholder img { width: 100%; border-radius: 4px; }
+.text-content { flex: 1; }
+.text-content h2 { margin-bottom: 10px; color: #222; }
 .grid {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 }
-
 .card {
     flex: 1;
-    background: transparent;
-    padding: 20px;
+    font-size: 0.85rem;
+    text-align: justify;
 }
-
-.card h2 {
-    border-bottom: 2px solid #2ecc71;
+.line-green {
+    border-bottom: 3px solid #27ae60;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
-
 footer {
     text-align: center;
-    padding: 30px;
-    color: #777;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #666;
 }
-
-
 @media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap; /* Дозволяє кнопкам переноситися на новий рядок */
-        justify-content: center;
-        gap: 10px;
-    }
-
-
-    .hero {
-        height: 300px;
-    }
-
-    .hero-box {
-        padding: 20px;
-        width: 90%; /* Щоб рамка не впиралася в краї екрана */
-    }
-
-    .hero-box h1 {
-        font-size: 1.5rem;
-    }
-
-    .info-block {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .image-placeholder {
-        width: 100%;
-        height: 200px; /* Зменшуємо висоту картинки на мобілці */
-    }
-
-
-    .grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        padding: 10px 0;
-    }
-
-    /* Контейнер: зменшуємо відступи по боках */
-    .container {
-        padding: 0 15px;
-        margin: 20px auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-box h1 {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.8rem;
-    }
+    .grid, .info-block { flex-direction: column; }
+    .navbar { flex-direction: column; padding: 20px; }
 }
